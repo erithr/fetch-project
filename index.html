@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAaHN3ABUiJAAOFxoAFSEnAA4WHQBmcXUADx8lAA8eIADf6/EAAw8RABEdIwAMEhkACxshAFJeYgAQHB4A1eHlAA0aHAAJGR8A2+ftAA0ZHwALGBoACxcdAExYXAAKFhgA1+PpAIeTkwA/T1UA/f7/AP/+/wASIigASlZaANvl7AAWJSgAFCEjANze3wBJVFgA09/lAEpaYAAhLjAADh4kAEZSVgASHiQAEiEkABsrMQAMHCIAbHJ3AN7q8ABKVlwASFlcANjo7gAKGiAA3OjuAAAMDgAUHiUA+v//AP/8/wD7//8A/f//AE9bXwD///8ACBgeANrm7AAbJy0AjJaWABIbHgDY5OoAiJSUAEtXWwBMV1sAFyMpAAgUGgCIkpIA+P3+AA8PDwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADw8PDw8ODUrKwo4PDw8PDw8PDw3DBQvNDQvCwVJPDw8HUZHQjQ0NDQ0NDQ0PhY/HQIlNDQZMCAtKDIwEDQ0EwgjSjQ0FxcXBygXFxcJNEpKPB4XFzFKShcXSiExFxdKOh0oFxcGLjsXFxcXBhcXKB08GB8xAQEXFxcXAQExHzY8PDkbFyQBFxcXFwFFFyYcPDwRSikXFxcXFxcXFxdKDzw8KkhKFxcXFxcXFx9KQwQ8PD1AOywNRBcXRDNKDhoHPDwiFxJKOicHByc6ShIXFTw8N0E8PDw8PDw8PDw8Azc8AAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAA="
+        rel="icon" type="image/x-icon" /> <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Fetch</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Shrikhand" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css/bootstrap4-retro.css">
+    <style>
+        #dogImage{
+    font-size:40px;
+    padding:30px;
+   text-align: center;
+    margin-top: 5px;
+    
+    
+}
+#name{
+    display: block;
+    color:black;
+    text-decoration: none;
+    
+}
+img{
+    border-style: solid;
+    border-width: 4px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+
+    <div class="jumbotron bg-primary text-center text-danger mb-0 radius-0">
+        <div class="container">
+            <div class="ht-tm-header">
+                <h1 class="display-1 display-xxl text-uppercase">Fetch</h1>
+                <span class="lead">We made it a thing. </span>
+                <br>
+                <br>
+                <div class="row" id="hide">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Email" id="emailId" required>
+                                <br>
+                                <input type="password" class="form-control" placeholder="Password" id="passwordId"
+                                    required>
+                                <p id="error"></p>
+
+                            </div>
+                            <button type="submit" class="btn btn-danger text-secondary" id="signInButton">Sign In</button>
+                            <button type="submit" class="btn btn-danger text-secondary" id="createAccountButton">Create
+                                Account</button>
+                        </form>
+                        <p>If you have an account, enter email and password and click sign in. If you'd like to create
+                            and account please enter your email and desired password and click create account.
+                            Password must be at least charachers, have 1 capital letter, 1 lower case letter, and 1
+                            number.</p>
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container py-5">
+        <div id="userInterface"></div>
+        <form>
+            <h3> Find A Dog Near You! </h3>
+            <p>Give us a few details, and we will help you get your home ready for your new friend.</p>
+            <div class="col-md-2">
+                <input type="text" class="form-control" name="zip" id="zip" placeholder="Zip Code">
+                <a href="#!" class="btn btn-danger btn-lg m-2 text-secondary btn-ht-dl-message">
+                    <span id='zipCodeButton'> Submit</span>
+                </a>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="dogImage"></div>
+        </div>
+    </div>
+
+
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-7">
+            <table class="table border border-dark table ">
+                <thead>
+                    <tr>
+
+                        <th scope="col">Product Name</th>
+                        <th scope="col ">Price</th>
+                        <th scope="col">Brand</th>
+                        <th scope="col">Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th id="test0" scope="row"></th>
+                        <td id="test1"></td>
+                        <td id="test2"></td>
+                        <td id="test3"></td>
+                    </tr>
+                    <tr>
+                        <th id="image2" scope="row"></th>
+                        <td id="price2"></td>
+                        <td id="brand2"></td>
+                        <td id="link2"></td>
+                    </tr>
+                    <tr>
+                        <th id="image3" scope="row"></th>
+                        <td id="price3"></td>
+                        <td id="brand3"></td>
+                        <td id="link3"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+
+    <!-- connect to firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+
+
+
+    <!-- our own js files -->
+    <!--Js library needed for interacting with Petfinder API -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src="./assets/javascript/functions.js"></script>
+    <!--API.JS For loading data onto the page-->
+    <script src="./assets/javascript/firebase.js"></script>
+    <script src="./assets/javascript/API.js"></script>
+</body>
+
+</html>
